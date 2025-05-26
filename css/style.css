@@ -1,0 +1,156 @@
+:root {
+  --main-color: #dc3545;
+  --white-color: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  list-style: none;
+}
+header {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav .muno {
+  display: flex;
+  gap: 20px;
+}
+.header-nav .muno li {
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.header-nav .muno li:hover {
+  color: var(--main-color);
+}
+
+.header-nav .muno li:hover:after {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+}
+.btn-all {
+  outline: none;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.cat {
+  background-color: var(--white-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.list {
+  display: none;
+}
+.container {
+  margin: 0 5%;
+  padding: 5%;
+}
+/* main : card-prodect */
+.card-prodect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-prodect .card-prodect-body {
+  padding: 15px;
+  max-width: 45%;
+}
+.card-prodect .card-prodect-body h1 {
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 10px;
+}
+.card-prodect .card-prodect-body p {
+  /* font-size: px; */
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+.card-prodect-img {
+  max-width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-prodect-img img {
+  max-width: 100%;
+}
+.btn-group {
+  display: flex;
+  gap: 0 10px;
+}
+footer {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+@media (max-width: 1080px) {
+  .card-prodect .card-prodect-body h1 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 8px;
+  }
+  .card-prodect .card-prodect-body p {
+    /* font-size: px; */
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin: 10px 0;
+  }
+  .card-prodect-img {
+    max-width: 40%;
+  }
+  .card-prodect-img img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .card-prodect .card-prodect-body h1 {
+    font-size: 31px;
+    line-height: 45px;
+    letter-spacing: 2px;
+  }
+  .card-prodect .card-prodect-body p {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 750px) {
+  .card-prodect .card-prodect-body {
+    max-width: 100%;
+  }
+  .card-prodect-img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .header-nav,
+  .btn-login {
+    display: none;
+  }
+  .list {
+    display: block;
+  }
+}
